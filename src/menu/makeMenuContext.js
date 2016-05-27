@@ -119,7 +119,7 @@ module.exports = (React, ReactNative, { constants, model, styles }) => {
       this.onLayout = once(this.onLayout);
     },
     onLayout() {
-      const handle = React.findNodeHandle(this.refs.Container);
+      const handle = ReactNative.findNodeHandle(this.refs.Container);
       UIManager.measure(handle, (x, y, w, h, px, py) => {
         this._ownMeasurements = {x, y, w, h, px, py};
       });
