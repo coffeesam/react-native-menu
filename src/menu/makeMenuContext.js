@@ -56,7 +56,7 @@ module.exports = (React, ReactNative, { constants, model, styles }) => {
       return this.state.openedMenu
     },
     openMenu(name) {
-      const handle = React.findNodeHandle(this._menus[name].ref);
+      const handle = ReactNative.findNodeHandle(this._menus[name].ref);
       UIManager.measure(handle, (x, y, w, h, px, py) => {
         this._menus[name].measurements = { x, y, w, h, px, py };
 
